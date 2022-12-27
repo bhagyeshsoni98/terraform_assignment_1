@@ -7,7 +7,7 @@ resource "aws_db_subnet_group" "db_subnet_group" {
   }
 }
 
-resource "aws_db_instance" "postgres_rds_instance" {
+resource "aws_db_instance" "mysql_rds_instance" {
   identifier             = var.rds_instance_name
   allocated_storage      = 10
   engine                 = "mysql"
