@@ -1,7 +1,7 @@
 output "generated_pvt_key" {
   value       = one(tls_private_key.generated_private_key[*].private_key_pem)
   sensitive   = true
-  description = "Public key of newly generated key pair to access frontend EC2 instances"
+  description = "Private key of newly generated key pair to access frontend EC2 instances"
 }
 
 output "frontent_instance_ids" {
