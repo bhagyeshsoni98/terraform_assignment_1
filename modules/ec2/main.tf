@@ -4,7 +4,7 @@ data "template_file" "user_data" {
   vars = {
     db_username      = var.db_username
     db_user_password = var.db_user_password
-    db_name          = var.db_name
+    db_name          = join("", [var.db_name, count.index])
     db_rds_endpoint  = var.db_rds_endpoint
     instance_count   = "${count.index}"
   }
